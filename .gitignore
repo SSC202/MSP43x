@@ -1,0 +1,6 @@
+*.pdf
+
+build
+.vscode
+MSP430F5xx_6xx
+msp430_driverlib
