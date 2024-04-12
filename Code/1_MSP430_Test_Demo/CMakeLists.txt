@@ -16,6 +16,13 @@
 ###################
 cmake_minimum_required(VERSION 3.12)
 set(CMAKE_SYSTEM_NAME Generic)
+
+# 设置编译器
+set(CMAKE_C_COMPILER msp430-elf-gcc)
+set(CMAKE_OBJCOPY msp430-elf-objcopy) 
+set(CMAKE_SIZE msp430-elf-size)
+set(CMAKE_GDB msp430-elf-gdb)
+
 project(MSP430 LANGUAGES C)
 
 # 设置芯片型号
@@ -28,12 +35,6 @@ add_definitions("-D${DEVICE_DEFINE}")
 # 设置库文件路径
 set(DRIVER_LIBRARY "E:/STM32SSC/TI/MSP430/msp430_driverlib/driverlib/MSP430F5xx_6xx")
 set(SUPPORT_LIBRARY "D:/ti/msp430-gcc/include")
-
-# 设置编译器
-set(CMAKE_C_COMPILER msp430-elf-gcc)
-set(CMAKE_OBJCOPY msp430-elf-objcopy) 
-set(CMAKE_SIZE msp430-elf-size)
-set(CMAKE_GDB msp430-elf-gdb)
 
 # 设置烧录器
 set(FLASHER "D:/ti/MSPFlasher_1.3.20/MSP430Flasher.exe")
